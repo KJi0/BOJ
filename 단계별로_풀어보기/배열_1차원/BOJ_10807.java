@@ -31,7 +31,6 @@ public class BOJ_10807 {
 			if (arr[i] == v)
 				cnt++;
 		}
-		
 		System.out.print(cnt);
-		}
+	}
 }
