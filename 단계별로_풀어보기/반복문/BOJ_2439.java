@@ -2,6 +2,7 @@ package 단계별로_풀어보기.반복문;
 
 /**
  * BOJ 2439 : 별 찍기 - 2
+ * 별을 찍는 문제 2
  */
 
 import java.io.BufferedReader;
