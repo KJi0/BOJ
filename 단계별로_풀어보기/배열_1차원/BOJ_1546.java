@@ -1,5 +1,10 @@
 package 단계별로_풀어보기.배열_1차원;
 
+/*
+ * BOJ 1546 : 평균
+ * 평균을 조작하는 문제
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
