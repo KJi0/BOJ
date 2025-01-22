@@ -1,5 +1,9 @@
 package code_plus.CP01_수학;
 
+/*
+ * BOJ 17427 : 약수의 합 2
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
