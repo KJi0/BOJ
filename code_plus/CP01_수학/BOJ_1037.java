@@ -1,5 +1,9 @@
 package code_plus.CP01_수학;
 
+/*
+ * BOJ 1037 : 약수
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
