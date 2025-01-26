@@ -36,7 +36,7 @@ public class BOJ_1929 {
 	public static void is_prime() {
 		isPrime[0] = isPrime[1] = false;
 		
-		for(int i = 2; i < Math.sqrt(isPrime.length); i++) {
+		for(int i = 2; i <= Math.sqrt(isPrime.length); i++) {
 			if (!isPrime[i]) continue;
 			
 			for(int j = i * i; j < isPrime.length; j += i)
