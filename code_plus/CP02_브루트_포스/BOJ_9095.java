@@ -1,5 +1,10 @@
 package code_plus.CP02_브루트_포스;
 
+/*
+ * BOJ 9095 : 1, 2, 3 더하기
+ * 다이나믹 프로그래밍!
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
