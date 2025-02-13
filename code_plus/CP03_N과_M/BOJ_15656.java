@@ -33,11 +33,11 @@ public class BOJ_15656 {
 		
 		Arrays.sort(X);
 		
-		dfs(0);
+		dfs(0, 0);
 		System.out.println(sb);
 	}
 
-	public static void dfs(int depth) {
+	public static void dfs(int depth, int start) {
 		if (depth == M) {
 			for (int val : arr) {
 				sb.append(val).append(' ');
@@ -46,9 +46,9 @@ public class BOJ_15656 {
 			return;
 		}
 		
-		for (int i = 0; i < N; i++) {
+		for (int i = start; i < N; i++) {
 			arr[depth] = X[i];
-			dfs(depth + 1);
+			dfs(depth + 1, i);
 		}
 	}
 }
