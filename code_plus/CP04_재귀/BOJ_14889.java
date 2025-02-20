@@ -2,6 +2,8 @@ package code_plus.CP04_재귀;
 
 /*
  * BOJ 14889 : 스타트와 링크
+ * 삼성 SW 역량 테스트 기출 중 하나라고 한다.
+ * 어려운데 ㅠ... 복습하자!
  */
 
 import java.io.BufferedReader;
