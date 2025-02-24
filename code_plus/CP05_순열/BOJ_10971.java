@@ -1,5 +1,11 @@
 package code_plus.CP05_순열;
 
+/*
+ * BOJ 10971 : 외판원 순회 2
+ * 모든 지점이 연결되어 있어 출발점이 상관없는 연결 그래프 문제!
+ * 이해하는 데 한참 걸렸다... 수련하자
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
