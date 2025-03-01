@@ -1,4 +1,8 @@
-package 단계별로_풀어보기;
+package code_plus.CP07_DP_Pt1;
+
+/*
+ * BOJ 2193 : 이친수
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
