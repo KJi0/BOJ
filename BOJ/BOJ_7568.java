@@ -1,9 +1,12 @@
 package BOJ;
 
+/*
+BOJ 7568: 덩치
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class BOJ_7568 {
