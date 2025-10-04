@@ -1,5 +1,9 @@
 package BOJ;
 
+/*
+BOJ 25757: 임스와 함께하는 미니게임
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
