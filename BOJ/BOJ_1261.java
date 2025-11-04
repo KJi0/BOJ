@@ -3,7 +3,6 @@ package BOJ;
 /*
 BOJ 1261: 알고스팟
 벽을 최대한 적게 부숴야 하므로 우선순위 큐를 쓸 것!!
-
  */
 
 import java.io.BufferedReader;
