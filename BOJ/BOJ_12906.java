@@ -89,23 +89,15 @@ public class BOJ_12906 {
                     return t;
                 }
 
-                for (int i = 0; i < 2; ++i) {
+                for (int i = 0; i < 3; ++i) {
                     for (int j = 0; j < 3; ++j) {
                         if (!cur.tower[i].isEmpty()) {
+                            if (i == j) continue;
+
                             Node next = copy(cur);
 
                             next.tower[j].push(next.tower[i].pop());
-                            String statusCode = next.statusCode();
-                            if (!set.contains(statusCode)) {
-                                set.add(statusCode);
-                                q.offer(next);
-                            }
-                        }
 
-                        if (!cur.tower[j].isEmpty()) {
-                            Node next = copy(cur);
-
-                            next.tower[i].push(next.tower[j].pop());
                             String statusCode = next.statusCode();
                             if (!set.contains(statusCode)) {
                                 set.add(statusCode);
