@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_6808_곽지영 {
+public class SWEA_6808 {
 	/*
 	 * SWEA 6808: 규영이와 인영이의 카드게임
 	 */

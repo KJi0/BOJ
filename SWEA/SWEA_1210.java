@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * 한 방향으로만 탐색하므로 break 써야 함
  */
 
-public class Solution_1210_곽지영 {
+public class SWEA_1210 {
 	static Node end;
 	static int[][] map;
 	
