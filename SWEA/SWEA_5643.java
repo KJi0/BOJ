@@ -1,12 +1,15 @@
+package SWEA;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class SWEA_5643 {
-	static int N, M;
-	static ArrayDeque<int[]> stu;
+	static int N, M, ans;
+	static List<Integer>[] taller;
+	static List<Integer>[] smaller;
+	static boolean[] visited;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,30 +19,52 @@ public class SWEA_5643 {
 			N = Integer.parseInt(br.readLine());
 			M = Integer.parseInt(br.readLine());
 
-			stu = new ArrayDeque<>();
+			taller = new ArrayList[N + 1];
+			smaller = new ArrayList[N + 1];
+
+			for (int i = 1; i <= N; i++) {
+				taller[i] = new ArrayList<>();
+				smaller[i] = new ArrayList<>();
+			}
 			
 			for (int i = 0; i < M; i++) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
 				int a = Integer.parseInt(st.nextToken()); // smaller
 				int b = Integer.parseInt(st.nextToken()); // taller
-				stu.add(new int[] {a, b});
+
+				taller[a].add(b);   // a보다 큰 애
+				smaller[b].add(a);  // b보다 작은 애
 			}
-			
-			
+
+			ans = 0;
+
+			for (int i = 1; i <= N; i++) {
+				int cnt = 0;
+
+				visited = new boolean[N + 1];
+				cnt += dfs(i, taller);
+
+				visited = new boolean[N + 1];
+				cnt += dfs(i, smaller);
+
+				if (cnt == N - 1) ans++;
+			}
+
+			System.out.println("#" + t + " " + ans);
 		}
 	}
 	
-	static void dfs() {
-		/*
-		 * n번 노드가 n번 제외 노드들과 모두 연결되어 있으면 cnt++
-		 * arraydeque<int[]> stu에서
-		 * stu[i]보다 크면 뒤에 추가하고 작으면 앞에 추가해서
-		 * stu[i] size가 N개면 cnt++?
-		 * 
-		 * ->
-		 * 나보다 큰 애들 몇 명?
-		 * 작은 애들 몇 명?
-		 * 다 더해서 N - 1?
-		 */
+	static int dfs(int idx, List<Integer>[] stu) {
+		int cnt = 0;
+		visited[idx] = true;
+
+		for (int s : stu[idx]) {
+			if (!visited[s]) {
+				cnt++;
+				cnt += dfs(s, stu);
+			}
+		}
+
+		return cnt;
 	}
 }
